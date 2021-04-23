@@ -1,0 +1,36 @@
+<div aria-hidden="true" aria-labelledby="change-modal-label" class="modal fade" id="change-psw" role="dialog"
+     tabindex="-1" xmlns="http://www.w3.org/1999/html">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="mr-1 modal-title" id="change-modal-label">Изменение пароля</h2>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/change_psw" id="change_password" method="post">
+                    <div class="form-group">
+                        <label class="form-label" for="old_psw"><h5>Введите старый пароль</h5></label>
+                        <input class="form-control" id="old_psw" name="old_psw"
+                               placeholder="Введите старый пароль" required type="password">
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="form-label" for="new_psw"><h5>Введите новый пароль</h5></label>
+                        <input class="form-control" id="new_psw" name="new_psw"
+                               placeholder="Введите новый пароль" required type="password">
+                    </div>
+                    </br>
+                    <div class="form-group">
+                        <label class="form-label" for="new_psw2"><h5>Подтвердите новый пароль</h5></label>
+                        <input class="form-control" id="new_psw2" name="new_psw2"
+                               placeholder="Подтвердите пароль" required type="password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Назад</button>
+                <button class="btn btn-primary" form="change_password" type="submit">Войти</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<!-- Модальное окно -->
+<div class="modal fade" id="auth-modal" tabindex="-1" role="dialog" aria-labelledby="auth-modal-label"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="mr-1 modal-title" id="auth-modal-label">Авторизация</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="login_form" method="post" action="/login">
+                    <div class="form-group">
+                        <label for="email" class="form-label"><h5>Введите Email</h5></label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                               placeholder="Введите адрес электронной почты" name="email" required>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label for="psw" class="form-label"><h5>Введите пароль</h5></label>
+                        <input type="password" class="form-control" id="psw"
+                               placeholder="Введите пароль" name="psw" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+                <button type="submit" class="btn btn-primary" form="login_form">Войти</button>
+            </div>
+        </div>
+    </div>
+</div>

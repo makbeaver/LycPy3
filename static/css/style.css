@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form.login_form {
+    width: 30%;
+    background-color: #ffcc00;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+div.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

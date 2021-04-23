@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<title>Корзина</title>
+<h1>Ваша корзина:</h1>
+{% for el in products.items() %}
+<h5><li><b>{{ el[0] }}</b> — {{ el[1][0] }} шт. Цена: {{ el[1][0] * el[1][1] }} руб.</li></h5>
+{% endfor %}
+<h3>Общая сумма: {{ total }}<small class="text-muted fw-light">₽</small></h3>
+                <a class="btn btn-primary btn-lg" href='/clear_cart' style="color: white;">Очистить корзину
+            </a>
+{% endblock %}

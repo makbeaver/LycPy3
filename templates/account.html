@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Про магазин</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Управление аккаунтом</h1>
+                <button class="btn btn-primary btn-lg" style="color: white;" data-bs-toggle="modal" data-bs-target="#change-psw">Сменить пароль
+            </button>
+</div>
+{% include 'change_psw.html' %}
+{% endblock %}

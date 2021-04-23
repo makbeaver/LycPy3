@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+<title>Магазин</title>
+
+{% block body %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-left">
+    <h1 class="display-4 fw-normal font-weight-bold" style="color: rgba(51, 7, 36, 0.473)">Каталог цветов</h1>
+</div>
+
+<body background="static/img/backside.jpg" style="background-attachment: fixed">
+<title>Онлайн магазин</title>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for el in data %}
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">
+                    <center>{{ el.title }}</center>
+                </h4>
+
+            </div>
+            <div class="card-body">
+               
+                <ul class="list-unstyled mt-3 mb-4">
+                    <center><img src="{{ el.photo }}" alt="Фото" style="display: inline-block; height: 250px;
+ object-fit: Cover;"
+                                 class="img-fluid"></center> <h1 class="card-title pricing-card-title">
+                    <center>{{ el.price
+                        }}<small class="text-muted fw-light">₽</small></center>
+                </h1>
+                    <li><i>{{ el.text }}</i></li>
+                    
+                </ul>
+                {% if el.title in prod %}
+                <button class="btn btn-lg btn-block btn-outline-primary" onclick="buy_item(event)"
+                        id="buy-item-{{ el.title }}">Купить <span
+                        class="badge bg-secondary" id="num">{{ prod[el.title][0]
+                        }}</span></button>
+                {% else %}
+                <button class="btn btn-lg btn-block btn-outline-primary" onclick="buy_item(event)"
+                        id="buy-iten-{{ el.title }}">Купить <span
+                        class="badge bg-secondary" id="num0">0</span></button>
+                {% endif %}
+                <button class="btn btn-lg btn-block btn-outline-danger" onclick="del_item_cart(event)"
+                        id="del-item-cart-{{ el.title }}" style="margin-bottom:0px; margin-left:5px;">—
+                </button>
+                {% if name == 'makbeaver@ya.ru' %}
+                <button class="btn btn-lg btn-block btn-outline-primary" id="del-item-{{ el.id }}"
+                        style="margin-bottom:0px; margin-left:10px;" type="button" onclick="del_item(event)">Удалить
+                    товар
+                </button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}

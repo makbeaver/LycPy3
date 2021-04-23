@@ -1,0 +1,54 @@
+<!-- Модальное окно -->
+<div class="modal fade" id="reg-modal" tabindex="-1" role="dialog" aria-labelledby="auth-modal-label"
+     aria-hidden="true" xmlns="http://www.w3.org/1999/html">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="mr-1 modal-title" id="auth-modal-label" style="justify-content: center;">Регистрация</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="register_form" method="post" action="/reg">
+                    <div class="form-group">
+                        <label for="email2" class="form-label"><h5>Введите Email</h5></label>
+                        <input type="email" class="form-control" id="email2" aria-describedby="emailHelp"
+                               placeholder="Введите адрес электронной почты" name="email" required>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label for="psw2" class="form-label"><h5>Введите пароль</h5></label>
+                        <input type="password" class="form-control" id="psw2"
+                               placeholder="Введите пароль" name="psw" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="psw3" class="form-label"><h5>Подтвердите пароль</h5></label>
+                        <input type="password" class="form-control" id="psw3"
+                               placeholder="Введите пароль повторно" name="psw_proof" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label><h5>Укажите пол</h5></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sex" id="male" value="male" checked>
+                            <label class="form-check-label" for="male">
+                                Мужской
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sex" id="female" value="female">
+                            <label class="form-check-label" for="female">
+                                Женский
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+                <button type="submit" class="btn btn-primary" form="register_form" data-bs-toggle="modal"
+                        data-bs-target="#check-reg">Зарегистрироваться </button>
+            </div>
+        </div>
+    </div>
+</div>
