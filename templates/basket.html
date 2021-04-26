@@ -2,6 +2,7 @@
 
 {% block body %}
 <title>Корзина</title>
+<body background="static/img/background.jpg" style="background-attachment: fixed"></body>
 <h1>Ваша корзина:</h1>
 {% for el in products.items() %}
 <h5><li><b>{{ el[0] }}</b> — {{ el[1][0] }} шт. Цена: {{ el[1][0] * el[1][1] }} руб.</li></h5>
